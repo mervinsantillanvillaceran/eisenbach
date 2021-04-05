@@ -2,7 +2,7 @@
     <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Users
             </h2>
         </template>
 
@@ -27,7 +27,7 @@
         },
         computed: {
             users() {
-                return this.data.data;
+                return this.data;
             }
         },
         props: ["data"],
