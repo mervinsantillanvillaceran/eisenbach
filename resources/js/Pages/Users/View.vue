@@ -9,11 +9,7 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <div class="py-6 sm:px-10 bg-white border-b border-gray-200">
-                        <div class="mt-2 text-2xl">
-                            Welcome {{ $page.props.user.name }} 👋
-                        </div>
-                    </div>
+                    <List :users="users"/>
                 </div>
             </div>
         </div>
@@ -22,10 +18,18 @@
 
 <script>
     import AppLayout from '@/Layouts/AppLayout'
+    import List from './List'
 
     export default {
         components: {
             AppLayout,
+            List,
         },
+        computed: {
+            users() {
+                return this.data.data;
+            }
+        },
+        props: ["data"],
     }
 </script>
