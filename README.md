@@ -13,6 +13,11 @@
 * Run php server `php artisan serve`
 * To build for production, just run `npm run build`
 
+### API
+
+* `/api/users` - List of all users
+* `/api/user/{id}` - User details
+
 ### Who do I talk to? ###
 
 * Mervin Villaceran
